@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reporte de pruebas · MARKERP</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f6fb; margin: 0; padding: 30px; color: #1b2a4a; }
+    h1 { color: #0d2a5c; margin-bottom: 4px; }
+    p.sub { margin-top: 0; color: #5b6b8a; }
+    .resumen { display: flex; gap: 16px; margin: 20px 0; flex-wrap: wrap; }
+    .tarjeta { background: #fff; border-radius: 10px; padding: 14px 22px; box-shadow: 0 1px 4px rgba(0,0,0,.1); }
+    .tarjeta b { font-size: 26px; display: block; }
+    table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.1); }
+    th { background: #0d2a5c; color: #fff; text-align: left; padding: 12px; }
+    td { padding: 12px; border-bottom: 1px solid #e6eaf3; }
+    .modulo i { color: #1a56b8; margin-right: 8px; }
+    .aprobado { color: #1e9e4a; font-weight: bold; }
+    .fallido { color: #d93025; font-weight: bold; }
+    .pendiente { color: #d89a00; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1><i class="fa-solid fa-chart-column"></i> MARKERP · Reporte de pruebas</h1>
+  <p class="sub">Resultados de validación funcional por módulo</p>
+
+  <div class="resumen">
+    <div class="tarjeta"><b>12</b>Pruebas totales</div>
+    <div class="tarjeta"><b>11</b>Aprobadas</div>
+    <div class="tarjeta"><b>92%</b>Porcentaje aprobado</div>
+  </div>
+
+  <table>
+    <thead>
+      <tr><th>Módulo</th><th>Escenario</th><th>Herramienta</th><th>Estado</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="modulo"><i class="fa-solid fa-handshake"></i>Proveedores</td><td>Registrar un proveedor válido</td><td>Cucumber</td><td class="aprobado"><i class="fa-solid fa-circle-check"></i> Aprobado</td></tr>
+      <tr><td class="modulo"><i class="fa-solid fa-handshake"></i>Proveedores</td><td>Rechazar proveedor con NIT duplicado</td><td>JUnit 5</td><td class="aprobado"><i class="fa-solid fa-circle-check"></i> Aprobado</td></tr>
+      <tr><td class="modulo"><i class="fa-solid fa-handshake"></i>Proveedores</td><td>Eliminar proveedor sin órdenes activas</td><td>Jest</td><td class="aprobado"><i class="fa-solid fa-circle-check"></i> Aprobado</td></tr>
+
+      <tr><td class="modulo"><i class="fa-solid fa-file-invoice-dollar"></i>Cotizaciones</td><td>Registrar cotización válida</td><td>Cucumber</td><td class="aprobado"><i class="fa-solid fa-circle-check"></i> Aprobado</td></tr>
+      <tr><td class="modulo"><i class="fa-solid fa-file-invoice-dollar"></i>Cotizaciones</td><td>Rechazar cotización con monto cero</td><td>JUnit 5</td><td class="aprobado"><i class="fa-solid fa-circle-check"></i> Aprobado</td></tr>
+      <tr><td class="modulo"><i class="fa-solid fa-file-invoice-dollar"></i>Cotizaciones</td><td>Rechazar cotización con monto negativo</td><td>Jest</td><td class="aprobado"><i class="fa-solid fa-circle-check"></i> Aprobado</td></tr>
+
+      <tr><td class="modulo"><i class="fa-solid fa-cart-shopping"></i>Órdenes de compra</td><td>Aprobar orden dentro del presupuesto</td><td>Cucumber</td><td class="aprobado"><i class="fa-solid fa-circle-check"></i> Aprobado</td></tr>
+      <tr><td class="modulo"><i class="fa-solid fa-cart-shopping"></i>Órdenes de compra</td><td>Rechazar orden que excede el presupuesto</td><td>Jest</td><td class="aprobado"><i class="fa-solid fa-circle-check"></i> Aprobado</td></tr>
+      <tr><td class="modulo"><i class="fa-solid fa-cart-shopping"></i>Órdenes de compra</td><td>No re-aprobar una orden ya aprobada</td><td>Jest</td><td class="aprobado"><i class="fa-solid fa-circle-check"></i> Aprobado</td></tr>
+
+      <tr><td class="modulo"><i class="fa-solid fa-boxes-stacked"></i>Inventario</td><td>Registrar entrada de stock</td><td>Gherkin</td><td class="pendiente"><i class="fa-solid fa-clock"></i> Pendiente</td></tr>
+      <tr><td class="modulo"><i class="fa-solid fa-boxes-stacked"></i>Inventario</td><td>Retiro exitoso de inventario</td><td>JUnit 5</td><td class="aprobado"><i class="fa-solid fa-circle-check"></i> Aprobado</td></tr>
+      <tr><td class="modulo"><i class="fa-solid fa-boxes-stacked"></i>Inventario</td><td>Rechazar retiro con stock insuficiente</td><td>SpecFlow</td><td class="aprobado"><i class="fa-solid fa-circle-check"></i> Aprobado</td></tr>
+    </tbody>
+  </table>
+</body>
+</html>

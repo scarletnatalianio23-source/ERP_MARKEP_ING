@@ -1,0 +1,10 @@
+markerp\OrderRepository.class
+markerp\PurchaseOrder.class
+markerp\InsufficientStockException.class
+markerp\Supplier.class
+markerp\SupplierService.class
+markerp\PurchaseOrderService.class
+markerp\InvalidSupplierException.class
+markerp\InventoryService.class
+markerp\QuoteService.class
+markerp\SupplierHasActiveOrdersException.class
